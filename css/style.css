@@ -1,0 +1,211 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body {
+    background: #cacaca;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+}
+main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* ESTRUCTURA GENERAL DEL NAV */
+header {
+    position: relative;
+}
+.nav {
+    position: relative;
+    width: 24em;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: 
+        radial-gradient(#17266733, #12154499),
+        radial-gradient(#008080, #6662),
+        linear-gradient(#008080ff, #0000),
+        linear-gradient(#385af5, #1e224b) ;
+    color: aliceblue;
+    justify-content: space-between;
+    padding-bottom: 1.5vh;
+}
+/* PARTE 1 LOGO */
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo img {
+    width: 23vh;
+}
+.logo p {
+    font-family: 'Gochi Hand', cursive;
+    font-size: 4vh;
+    user-select: none;
+}
+/* PARTE 2 OPCIONES */
+.nav .opciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+}
+.nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 3.6vh;
+    font-weight: bold;
+}
+.nav span {
+    user-select: none;
+    margin-top: -3vh;
+}
+/* PARTE 3 REDES */
+.nav .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav .info .nav-redes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1vw;
+    gap: 1vw;
+}
+svg {
+    color: aliceblue;
+    margin: .4em;
+}
+.info p {
+    font-size: 2vh;
+    user-select: none;
+}
+
+/* CUERPO DE LA WEB */
+
+.contenedor2 {
+    display: none;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    width: calc(100vw - 24em);
+}
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor .seccion1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/ejemplo.jpg);
+    width: 60%;
+    height: 100vh;
+    background-position: center;
+}
+.contenedor .columna {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.contenedor .seccion2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/libreria.jpg);
+    width: 100%;
+    height: 50%;
+    background-position: center;
+}
+.contenedor .seccion3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/marroquine.jpg);
+    width: 100%;
+    height: 50%;
+    background-position: center;
+}
+
+/* TEXTO DEL CUERPO */
+
+.contenedor .texto p {
+    font-family: 'Gochi Hand', cursive;
+    font-size: 6vh;
+    user-select: none;
+    color: #f3f9ff;
+    font-weight: bold;
+    text-shadow: #2d3056 0 0 180px;
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1400px) {
+    .contenedor .texto p {
+        font-size: 4vh;
+    }
+}
+/* cambio al 2do contenedor*/
+@media screen and (max-width: 1100px) {
+    .contenedor {
+        display: none;
+    }
+    .contenedor2 {
+        display: inline-block;
+    }
+
+    .contenedor2 {
+        display: flex;
+        flex-direction: column;
+        width: calc(100vw - 24em);
+    }
+    section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .contenedor2 .seccion1 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/ejemplo.jpg);
+        width: 100%;
+        height: calc(100vh / 3);
+        background-position: center;
+    }
+    .contenedor2 .seccion2 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/libreria.jpg);
+        width: 100%;
+        height: calc(100vh / 3);
+        background-position: center;
+    }
+    .contenedor2 .seccion3 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/marroquine.jpg);
+        width: 100%;
+        height: calc(100vh / 3);
+        background-position: center;
+    }
+    .contenedor2 .texto p {
+        font-family: 'Gochi Hand', cursive;
+        font-size: 6vh;
+        user-select: none;
+        color: #f3f9ff;
+        font-weight: bold;
+        text-shadow: #2d3056 0 0 180px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .contenedor2 {
+        display: none;
+    }
+    .nav {
+        width: 100vw;
+    }
+    
+}
